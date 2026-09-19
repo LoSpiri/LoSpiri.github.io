@@ -1,36 +1,36 @@
-# Lorenzo Spiri — Portfolio
+# Lorenzo Spiridioni (LoSpiri) — Portfolio
 
-Personal portfolio website built with plain HTML & CSS, designed for GitHub Pages.
+Personal portfolio at **[https://lospiri.github.io/](https://lospiri.github.io/)** (GitHub User Pages). Plain HTML & CSS, deployed with GitHub Actions.
 
-## Setup
+The [`website`](https://github.com/LoSpiri/website) repository only redirects legacy `/website/` URLs to the user site.
 
-1. Replace placeholder content in `index.html` with your real information
-2. Replace the portrait placeholder with a real image (see below)
-3. Push to a GitHub repository named `<username>.github.io`
-4. Enable GitHub Pages in the repository settings (deploy from `main` branch)
+## Development
 
-## Adding a portrait image
+1. Clone **`LoSpiri.github.io`** (primary repo for site content).
+2. Edit HTML/CSS/JS locally and push to `main`; Actions deploys to Pages.
+3. Canonical base URL for SEO: `https://lospiri.github.io` (see `sitemap.xml`, canonical tags, JSON-LD).
 
-1. Add your photo to an `img/` folder (e.g. `img/portrait.jpg`)
-2. In `index.html`, replace the `<div class="portrait-placeholder">` element with:
-   ```html
-   <img src="img/portrait.jpg" alt="Portrait of Lorenzo Spiri" class="portrait-img">
-   ```
-3. The `.portrait-img` class is already styled in `css/style.css` (see below). Add this if needed:
-   ```css
-   .portrait-img {
-     width: 100px;
-     height: 100px;
-     border-radius: 50%;
-     object-fit: cover;
-   }
-   ```
+## SEO checklist (after deploy)
+
+- [Google Search Console](https://search.google.com/search-console): property `https://lospiri.github.io`, submit sitemap `https://lospiri.github.io/sitemap.xml`, request indexing for the home page.
+- GitHub profile: set website to `https://lospiri.github.io`.
+- LinkedIn: add the same URL in the contact/website field.
+- Optional: profile README repo with a link to the site.
 
 ## Structure
 
 ```
-├── index.html       # Main page
-├── css/
-│   └── style.css    # All styles
-└── README.md
+├── index.html           # Home (Person schema, Open Graph)
+├── miscellaneous.html
+├── projects.html
+├── articles.html
+├── robots.txt
+├── sitemap.xml
+├── css/style.css
+├── js/components.js
+└── .github/workflows/static.yml
 ```
+
+## Portrait image
+
+Add `img/portrait.jpg` for the bio and `og:image` (required for rich snippets).

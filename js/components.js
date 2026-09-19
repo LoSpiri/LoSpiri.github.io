@@ -91,7 +91,7 @@ class SiteFooter extends HTMLElement {
       <footer class="site-footer">
         <p>&copy; ${new Date().getFullYear()} Lorenzo Spiridioni. All rights reserved.</p>
         <div class="footer-links">
-          <a href="https://github.com/lospiri" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/lospiri" target="_blank" rel="me noopener">GitHub</a>
           <a href="https://linkedin.com/in/lorenzo-spiridioni" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </footer>
